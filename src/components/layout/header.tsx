@@ -1,3 +1,5 @@
+"use client";
+
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
