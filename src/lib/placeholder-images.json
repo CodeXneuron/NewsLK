@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "news-1",
+      "description": "A bustling street scene in Colombo, Sri Lanka.",
+      "imageUrl": "https://images.unsplash.com/photo-1710381535932-6f616b8d6cb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHJlZXQlMjBjb2xvbWJvfGVufDB8fHx8MTc2ODQxNDI0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "street colombo"
+    },
+    {
+      "id": "news-2",
+      "description": "Sri Lankan parliament building.",
+      "imageUrl": "https://images.unsplash.com/photo-1617034592886-5c36bb6de0d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwYXJsaWFtZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzY4NDE0MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "parliament building"
+    },
+    {
+      "id": "news-3",
+      "description": "Cricket players on a field.",
+      "imageUrl": "https://images.unsplash.com/photo-1587280501635-a19de238a81e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y3JpY2tldCUyMHNwb3J0fGVufDB8fHx8MTc2ODMxNzM3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cricket sport"
+    },
+    {
+      "id": "news-4",
+      "description": "Traditional Sri Lankan dancers performing.",
+      "imageUrl": "https://images.unsplash.com/photo-1565792493552-39c3b0e40596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx0cmFkaXRpb25hbCUyMGRhbmNlfGVufDB8fHx8MTc2ODQxNDIzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "traditional dance"
+    },
+    {
+      "id": "news-5",
+      "description": "A beautiful sunset over a Sri Lankan beach.",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMHN1bnNldHxlbnwwfHx8fDE3NjgzMTkyMjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "beach sunset"
+    },
+    {
+      "id": "news-6",
+      "description": "Aerial view of a city in Sri Lanka.",
+      "imageUrl": "https://images.unsplash.com/photo-1510846606678-710c05a5c776?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2l0eSUyMGFlcmlhbHxlbnwwfHx8fDE3NjgzMzU3NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city aerial"
+    },
+    {
+      "id": "news-7",
+      "description": "Protesters at a political rally.",
+      "imageUrl": "https://images.unsplash.com/photo-1764416835001-15d1e3100fab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb2xpdGljYWwlMjByYWxseXxlbnwwfHx8fDE3Njg0MTQyMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "political rally"
+    },
+    {
+      "id": "news-8",
+      "description": "A scenic train ride through Sri Lankan tea plantations.",
+      "imageUrl": "https://images.unsplash.com/photo-1713015702343-b91707c04bc7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0cmFpbiUyMHRlYXxlbnwwfHx8fDE3Njg0MTQyMzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "train tea"
+    },
+    {
+      "id": "news-9",
+      "description": "A close-up of a stock market chart on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1439434768192-c60615c1b3c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdG9jayUyMG1hcmtldHxlbnwwfHx8fDE3NjgzNjU0OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stock market"
+    },
+    {
+      "id": "news-10",
+      "description": "An elephant in a national park.",
+      "imageUrl": "https://images.unsplash.com/photo-1541544526507-e6bdeef40417?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxlbGVwaGFudCUyMHdpbGRsaWZlfGVufDB8fHx8MTc2ODQxNDIzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "elephant wildlife"
+    },
+    {
+      "id": "news-11",
+      "description": "A chef preparing Sri Lankan food.",
+      "imageUrl": "https://images.unsplash.com/photo-1610913948701-42071d6a1df5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9vZCUyMHByZXBhcmF0aW9ufGVufDB8fHx8MTc2ODQxNDIzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food preparation"
+    },
+    {
+      "id": "news-12",
+      "description": "A view of the Sigiriya rock fortress.",
+      "imageUrl": "https://images.unsplash.com/photo-1695396998446-776f20becfdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzaWdpcml5YSUyMGZvcnRyZXNzfGVufDB8fHx8MTc2ODQxNDIzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sigiriya fortress"
+    }
+  ]
 }
