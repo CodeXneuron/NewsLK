@@ -14,48 +14,11 @@ body {
 
 @layer base {
   :root {
-<<<<<<< HEAD
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
-=======
     --background: 40 50% 96%;
     --foreground: 20 14% 4%;
->>>>>>> 193dac120430e2ea90134984a1039f4cf1085283
     --card: 0 0% 100%;
     --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
-<<<<<<< HEAD
-    --popover-foreground: 0 0% 10%;
-    --primary: 0 72% 51%;
-    /* Red #DC2626 */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
-    --accent: 16 100% 60%;
-    /* Orange accent */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 72% 51%;
-    --chart-1: 0 72% 51%;
-    --chart-2: 16 100% 60%;
-    --chart-3: 0 0% 45%;
-    --chart-4: 0 0% 70%;
-    --chart-5: 0 0% 85%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 0 72% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 0 72% 51%;
-=======
     --popover-foreground: 20 14% 4%;
     --primary: 30 100% 60%;
     --primary-foreground: 25 100% 15%;
@@ -84,46 +47,9 @@ body {
     --sidebar-accent-foreground: 20 14% 4%;
     --sidebar-border: 30 20% 80%;
     --sidebar-ring: 30 100% 50%;
->>>>>>> 193dac120430e2ea90134984a1039f4cf1085283
   }
 
   .dark {
-<<<<<<< HEAD
-    --background: 0 0% 10%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 15%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 72% 51%;
-    /* Red #DC2626 */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 16 100% 60%;
-    /* Orange accent */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 0 72% 51%;
-    --chart-1: 0 72% 51%;
-    --chart-2: 16 100% 60%;
-    --chart-3: 0 0% 55%;
-    --chart-4: 0 0% 70%;
-    --chart-5: 0 0% 85%;
-    --sidebar-background: 0 0% 15%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 72% 51%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 20%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 25%;
-    --sidebar-ring: 0 72% 51%;
-=======
     --background: 20 14% 4%;
     --foreground: 40 50% 92%;
     --card: 24 10% 10%;
@@ -156,7 +82,6 @@ body {
     --sidebar-accent-foreground: 40 50% 92%;
     --sidebar-border: 24 10% 15.9%;
     --sidebar-ring: 30 100% 60%;
->>>>>>> 193dac120430e2ea90134984a1039f4cf1085283
   }
 }
 

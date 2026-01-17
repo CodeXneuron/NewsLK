@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { AuthProvider } from '@/context/auth-provider';
 import { AppLayout } from '@/components/layout/app-layout';
@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description: 'Your trusted source for live breaking news, updates, and alerts from Sri Lanka. Stay informed with real-time news coverage.',
   keywords: ['Sri Lanka news', 'breaking news', 'live news', 'news alerts', 'Lanka news'],
   authors: [{ name: 'NewsLK' }],
-  themeColor: '#DC2626',
   manifest: '/manifest.json',
   icons: {
     icon: [
@@ -32,6 +31,10 @@ export const metadata: Metadata = {
     description: 'Breaking news from Sri Lanka',
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: '#FF9933',
+}
 
 export default function RootLayout({
   children,
