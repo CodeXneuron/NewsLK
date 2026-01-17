@@ -5,8 +5,32 @@ import { AppLayout } from '@/components/layout/app-layout';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'LankaNow - Sri Lankan News Alerts',
-  description: 'Your trusted source for the latest news from Sri Lanka.',
+  title: 'NewsLK Live - Breaking News from Sri Lanka',
+  description: 'Your trusted source for live breaking news, updates, and alerts from Sri Lanka. Stay informed with real-time news coverage.',
+  keywords: ['Sri Lanka news', 'breaking news', 'live news', 'news alerts', 'Lanka news'],
+  authors: [{ name: 'NewsLK' }],
+  themeColor: '#DC2626',
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  openGraph: {
+    title: 'NewsLK Live - Breaking News from Sri Lanka',
+    description: 'Your trusted source for live breaking news from Sri Lanka',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NewsLK Live',
+    description: 'Breaking news from Sri Lanka',
+  },
 };
 
 export default function RootLayout({

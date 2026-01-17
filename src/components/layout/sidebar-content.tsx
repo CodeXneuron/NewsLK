@@ -16,6 +16,9 @@ import {
   Clapperboard,
   Trophy,
   AlertTriangle,
+  Briefcase,
+  Cpu,
+  Heart,
 } from "lucide-react";
 
 import {
@@ -29,7 +32,6 @@ import {
   SidebarGroup,
   SidebarGroupLabel,
 } from "@/components/ui/sidebar";
-import { Logo } from "@/components/icons/logo";
 import { useAuth } from "@/hooks/use-auth";
 import { auth } from "@/lib/firebase/config";
 import { ALL_CATEGORIES } from "@/types";
@@ -43,6 +45,9 @@ const categoryIcons: Record<NewsCategory, React.ElementType> = {
   'Entertainment': Clapperboard,
   'Local News': Newspaper,
   'International': Globe,
+  'Business': Briefcase,
+  'Technology': Cpu,
+  'Lifestyle': Heart,
 };
 
 export function SidebarContentComponent() {
@@ -63,11 +68,10 @@ export function SidebarContentComponent() {
   return (
     <Sidebar>
       <SidebarHeader className="border-b">
-        <div className="flex items-center gap-2 p-2">
-          <Logo />
-          <h1 className="font-headline text-xl font-bold text-foreground">
-            LankaNow
-          </h1>
+        <div className="flex items-center gap-2 p-4">
+          <h2 className="font-headline text-lg font-bold text-foreground">
+            Menu
+          </h2>
         </div>
       </SidebarHeader>
 
@@ -92,7 +96,7 @@ export function SidebarContentComponent() {
             </SidebarMenuItem>
           )}
         </SidebarMenu>
-        
+
         <SidebarGroup>
           <SidebarGroupLabel>Categories</SidebarGroupLabel>
           <SidebarMenu>
