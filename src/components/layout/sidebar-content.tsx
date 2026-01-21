@@ -1,164 +1,116 @@
-"use client";
-
+import { Home, Newspaper, Building2, Trophy, Briefcase, Cpu, Tv, Mail } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { signOut } from "firebase/auth";
 import {
-  Home,
-  Bookmark,
-  Settings,
-  LogIn,
-  LogOut,
-  UserPlus,
-  Newspaper,
-  Globe,
-  Landmark,
-  Clapperboard,
-  Trophy,
-  AlertTriangle,
-  Briefcase,
-  Cpu,
-  Heart,
-} from "lucide-react";
-
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupLabel,
+    Sidebar,
+    SidebarContent,
+    SidebarGroup,
+    SidebarGroupContent,
+    SidebarGroupLabel,
+    SidebarMenu,
+    SidebarMenuButton,
+    SidebarMenuItem,
+    SidebarHeader,
+    SidebarFooter,
 } from "@/components/ui/sidebar";
-import { useAuth } from "@/hooks/use-auth";
-import { auth } from "@/lib/firebase/config";
-import { ALL_CATEGORIES } from "@/types";
-import { Separator } from "@/components/ui/separator";
-import type { NewsCategory } from "@/types";
+import { TrendingTopics } from "@/components/trending/trending-topics";
+import { SidebarWeatherWidget } from "@/components/weather/sidebar-weather-widget";
+import { Logo } from "@/components/icons/logo";
 
-const categoryIcons: Record<NewsCategory, React.ElementType> = {
-  'Breaking News': AlertTriangle,
-  'Politics': Landmark,
-  'Sports': Trophy,
-  'Entertainment': Clapperboard,
-  'Local News': Newspaper,
-  'International': Globe,
-  'Business': Briefcase,
-  'Technology': Cpu,
-  'Lifestyle': Heart,
-};
+const navigation = [
+    { name: "All News", href: "/", icon: Home },
+];
+
+const categories = [
+    { name: "Breaking News", href: "/?category=Breaking%20News", icon: Newspaper },
+    { name: "Politics", href: "/?category=Politics", icon: Building2 },
+    { name: "Sports", href: "/?category=Sports", icon: Trophy },
+    { name: "Business", href: "/?category=Business", icon: Briefcase },
+    { name: "Technology", href: "/?category=Technology", icon: Cpu },
+    { name: "Entertainment", href: "/?category=Entertainment", icon: Tv },
+];
 
 export function SidebarContentComponent() {
-  const pathname = usePathname();
-  const { user } = useAuth();
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-    } catch (error) {
-      console.error("Error signing out:", error);
-    }
-  };
-
-  const isActive = (path: string) => pathname === path;
-  const isCategoryActive = (category: string) => pathname === `/category/${category.toLowerCase().replace(' ', '-')}`;
-
-  return (
-    <Sidebar>
-      <SidebarHeader className="border-b">
-        <div className="flex items-center gap-2 p-4">
-          <h2 className="font-headline text-lg font-bold text-foreground">
-            Menu
-          </h2>
-        </div>
-      </SidebarHeader>
-
-      <SidebarContent className="p-2">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={isActive("/")}>
-              <Link href="/">
-                <Home />
-                All News
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          {user && (
-            <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/bookmarks")}>
-                <Link href="/bookmarks">
-                  <Bookmark />
-                  Bookmarks
+    return (
+        <Sidebar>
+            {/* Header with Logo */}
+            <SidebarHeader className="p-4 border-b border-border/50">
+                <Link href="/" className="flex items-center gap-3 group">
+                    <Logo className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                    <div>
+                        <h1 className="text-lg font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+                            NewsLK
+                        </h1>
+                        <p className="text-xs text-muted-foreground">Sri Lanka's News Hub</p>
+                    </div>
                 </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          )}
-        </SidebarMenu>
+            </SidebarHeader>
 
-        <SidebarGroup>
-          <SidebarGroupLabel>Categories</SidebarGroupLabel>
-          <SidebarMenu>
-            {ALL_CATEGORIES.map((category) => {
-              const Icon = categoryIcons[category];
-              return (
-                <SidebarMenuItem key={category}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={isCategoryActive(category)}
-                  >
-                    <Link href={`/?category=${encodeURIComponent(category)}`}>
-                      <Icon />
-                      {category}
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              );
-            })}
-          </SidebarMenu>
-        </SidebarGroup>
-      </SidebarContent>
+            <SidebarContent>
+                {/* Navigation */}
+                <SidebarGroup>
+                    <SidebarGroupLabel className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
+                        Navigation
+                    </SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            {navigation.map((item) => (
+                                <SidebarMenuItem key={item.name}>
+                                    <SidebarMenuButton asChild>
+                                        <Link href={item.href} className="flex items-center gap-3 text-slate-200 hover:text-white">
+                                            <item.icon className="h-4 w-4" />
+                                            <span>{item.name}</span>
+                                        </Link>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem>
+                            ))}
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
 
-      <SidebarFooter className="border-t p-2">
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={isActive("/settings")}>
-              <Link href="/settings">
-                <Settings />
-                Settings
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          {user ? (
-            <SidebarMenuItem>
-              <SidebarMenuButton onClick={handleLogout}>
-                <LogOut />
-                Logout
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          ) : (
-            <>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/login")}>
-                  <Link href="/login">
-                    <LogIn />
-                    Login
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/signup")}>
-                  <Link href="/signup">
-                    <UserPlus />
-                    Sign Up
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </>
-          )}
-        </SidebarMenu>
-      </SidebarFooter>
-    </Sidebar>
-  );
+                {/* Categories */}
+                <SidebarGroup>
+                    <SidebarGroupLabel className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
+                        Categories
+                    </SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            {categories.map((item) => (
+                                <SidebarMenuItem key={item.name}>
+                                    <SidebarMenuButton asChild>
+                                        <Link href={item.href} className="flex items-center gap-3 text-slate-200 hover:text-white">
+                                            <item.icon className="h-4 w-4" />
+                                            <span>{item.name}</span>
+                                        </Link>
+                                    </SidebarMenuButton>
+                                </SidebarMenuItem>
+                            ))}
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
+
+                {/* Compact Weather */}
+                <SidebarGroup>
+                    <SidebarGroupContent>
+                        <SidebarWeatherWidget />
+                    </SidebarGroupContent>
+                </SidebarGroup>
+
+                {/* Trending Topics */}
+                <SidebarGroup>
+                    <SidebarGroupContent>
+                        <TrendingTopics />
+                    </SidebarGroupContent>
+                </SidebarGroup>
+            </SidebarContent>
+
+            {/* Footer */}
+            <SidebarFooter className="p-4 border-t border-border/50">
+                <div className="text-center">
+                    <p className="text-xs text-slate-400">
+                        © 2024 NewsLK. All rights reserved.
+                    </p>
+                </div>
+            </SidebarFooter>
+        </Sidebar>
+    );
 }

@@ -17,6 +17,9 @@ interface ArticleImageGalleryProps {
 export function ArticleImageGallery({ images }: ArticleImageGalleryProps) {
     const [selectedImage, setSelectedImage] = useState<ArticleImage | null>(null);
 
+    // Disabled: Article Images section hidden
+    return null;
+
     if (!images || images.length === 0) {
         return null;
     }

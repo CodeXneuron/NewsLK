@@ -16,17 +16,17 @@ export function NewsList({ articles }: NewsListProps) {
 
   return (
     <div className="container mx-auto">
-      <h2 className="mb-6 font-headline text-3xl font-bold md:text-4xl">
+      <h2 className="mb-4 sm:mb-6 font-headline text-2xl sm:text-3xl font-bold md:text-4xl">
         {categoryTitle}
       </h2>
       {articles.length > 0 ? (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {articles.map((article) => (
             <NewsCard key={article.id} article={article} />
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted p-12 text-center">
+        <div className="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-muted p-8 sm:p-12 text-center">
           <h3 className="text-xl font-semibold">No Articles Found</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             There are no articles in the "{categoryTitle}" category at the moment.

@@ -1,7 +1,7 @@
 {
-    "name": "NewsLK Live",
-    "short_name": "NewsLK",
-    "description": "Breaking news from Sri Lanka - Live updates and alerts",
+    "name": "NewsLK Live - Breaking News from Sri Lanka",
+    "short_name": "NewsLK Live",
+    "description": "Your trusted source for live breaking news from Sri Lanka",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

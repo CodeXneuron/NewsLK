@@ -24,4 +24,6 @@ export interface Article {
   fullText?: string;
   images?: Array<{ url: string; alt: string; caption: string }>;
   author?: string;
+  originalImageUrl?: string; // Original image from API
+  generatedThumbnail?: boolean; // Whether thumbnail was AI-generated
 }

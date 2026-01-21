@@ -3,6 +3,8 @@ import './globals.css';
 import { AuthProvider } from '@/context/auth-provider';
 import { AppLayout } from '@/components/layout/app-layout';
 import { Toaster } from "@/components/ui/toaster"
+import { SplashScreen } from "@/components/ui/splash-screen";
+
 
 export const metadata: Metadata = {
   title: 'NewsLK Live - Breaking News from Sri Lanka',
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#FF9933',
+  themeColor: '#DC2626',
 }
 
 export default function RootLayout({
@@ -49,12 +51,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased" suppressHydrationWarning>
-        <AuthProvider>
-          <AppLayout>
-            {children}
-          </AppLayout>
-          <Toaster />
-        </AuthProvider>
+        <SplashScreen>
+          <AuthProvider>
+            <AppLayout>
+              {children}
+            </AppLayout>
+            <Toaster />
+          </AuthProvider>
+        </SplashScreen>
       </body>
     </html>
   );

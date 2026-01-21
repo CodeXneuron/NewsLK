@@ -93,12 +93,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                                 <Clock className="h-5 w-5 text-purple-600 dark:text-purple-400" />
                                 <span className="text-sm font-medium">{readingTime} min read</span>
                             </div>
-                            {article.author && (
-                                <div className="flex items-center gap-2">
-                                    <User className="h-5 w-5 text-green-600 dark:text-green-400" />
-                                    <span className="text-sm font-medium">By {article.author}</span>
-                                </div>
-                            )}
+
                         </div>
                     </div>
 
@@ -126,20 +121,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                             <div className="h-1 w-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
                         </div>
 
-                        {/* Article Source Link */}
-                        <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-700/50 dark:to-slate-600/50 rounded-2xl p-6 border border-blue-200 dark:border-slate-600">
-                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
-                                Original Source:
-                            </p>
-                            <a
-                                href={article.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium underline underline-offset-4 transition-colors"
-                            >
-                                View on Hiru News
-                            </a>
-                        </div>
+
                     </div>
 
                     {/* Social Sharing */}
